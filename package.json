@@ -1,0 +1,25 @@
+{
+  "name": "content-moderation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MindMeltD/Content-Moderation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MindMeltD/Content-Moderation/issues"
+  },
+  "homepage": "https://github.com/MindMeltD/Content-Moderation#readme",
+  "dependencies": {
+    "@types/chrome": "^0.0.323",
+    "typescript": "^5.8.3"
+  }
+}
