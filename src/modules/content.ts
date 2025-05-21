@@ -1,1 +1,0 @@
-console.log("Hate Speech Detector Content Script Loaded");
