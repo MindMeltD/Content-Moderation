@@ -1,2 +1,4 @@
 Project Documents/
 src/
+node_modules/
+build.sh

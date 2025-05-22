@@ -20,6 +20,11 @@
   "homepage": "https://github.com/MindMeltD/Content-Moderation#readme",
   "dependencies": {
     "@types/chrome": "^0.0.323",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.5"
   }
 }
