@@ -51,10 +51,10 @@ const NavigationElem = ({ onClick }) => {
             React.createElement("i", null, "\u2753"),
             "Help")));
 };
-const popupHTML = ({ blocked }) => {
+const PopupHTML = ({ blocked }) => {
     return (React.createElement("body", null,
         React.createElement(HeaderElem, { headerText: "SafeSpeak Blocker" }),
         React.createElement(StatBlockElem, { blocked: blocked }),
         React.createElement(NavigationElem, { onClick: () => console.log("Navigation clicked") })));
 };
-export default BlockNumberElem;
+export default PopupHTML;
