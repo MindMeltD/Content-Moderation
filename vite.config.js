@@ -5,6 +5,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
     build: {
+        base: './',
         outDir: 'dist',
         emptyOutDir: false,
         rollupOptions: {
