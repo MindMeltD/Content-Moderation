@@ -1,5 +1,6 @@
 import { defineConfig, resolveConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
@@ -8,7 +9,7 @@ export default defineConfig({
         emptyOutDir: false,
         rollupOptions: {
             input: {
-                popup: 'src/popup.html'
+                popup: path.resolve(__dirname, 'src/popup.html')
             },
             output: {
                 entryFileNames: '[name].js',
