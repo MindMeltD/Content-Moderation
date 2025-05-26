@@ -5,12 +5,11 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
     build: {
-        base: './',
         outDir: 'dist',
         emptyOutDir: false,
         rollupOptions: {
             input: {
-                popup: path.resolve(__dirname, 'src/popup.html')
+                popup: path.resolve(__dirname, 'popup.html')
             },
             output: {
                 entryFileNames: '[name].js',

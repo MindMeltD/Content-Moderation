@@ -2,3 +2,7 @@ Project Documents/
 /src/
 node_modules/
 build.sh
+/popup.html
+/tsconfig.json
+/vite.config.js
+/README.md
