@@ -5,7 +5,7 @@
   "description": "Right-click to report hateful content to moderators.",
   "permissions": ["contextMenus", "activeTab", "scripting"],
   "background": {
-    "service_worker": "dist/background.js"
+    "service_worker": "dist/modules/background.js"
   },
   "action": {
     "default_popup": "dist/src/popup.html",
