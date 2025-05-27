@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Hate Speech Reporter",
+  "version": "0.1",
+  "description": "Right-click to report hateful content to moderators.",
+  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "images/icon-32.png"
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
