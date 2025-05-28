@@ -54,11 +54,11 @@ const NavigationElem = ({ onClick }: { onClick: () => void }) => {
 
 const popupHTML = ({ blocked, onClick }: { blocked: number, onClick: () => void }) => {
     return (
-        <body>
+        <div>
             <HeaderElem headerText="SafeSpeak Blocker"/>
             <StatBlockElem blocked={blocked} />
             <NavigationElem onClick={onClick} />
-        </body>
+        </div>
     );
 };
 
