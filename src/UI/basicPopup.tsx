@@ -18,8 +18,7 @@ function blockNumber(blocked : number) {
 const BlockNumberElem = ({ blocked }: { blocked: number }) => {
     return (
         <div className="count">
-            <i className="icon">🚫</i>
-            {blockNumber(blocked)}
+            🚫{blockNumber(blocked)}
         </div>
     );
 };
@@ -42,12 +41,12 @@ const HeaderElem = ({ headerText }: { headerText: string }) => {
 const NavigationElem = ({ onClick }: { onClick: () => void }) => {
     return (
         <div className="nav">
-            <button onClick={onClick}><i>🏠</i>Home</button>
-            <button onClick={onClick}><i>🛡️</i>Status</button>
-            <button onClick={onClick}><i>👤</i>Protect</button>
-            <button onClick={onClick}><i>📊</i>Stats</button>
-            <button onClick={onClick}><i>⚙️</i>Settings</button>
-            <button onClick={onClick}><i>❓</i>Help</button>
+            <button onClick={onClick}>🏠 Home</button>
+            <button onClick={onClick}>🛡️ Status</button>
+            <button onClick={onClick}>👤 Protect</button>
+            <button onClick={onClick}>📊 Stats</button>
+            <button onClick={onClick}>⚙️ Settings</button>
+            <button onClick={onClick}>❓ Help</button>
         </div>
     );
 };

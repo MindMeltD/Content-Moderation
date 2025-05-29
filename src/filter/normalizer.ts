@@ -33,10 +33,13 @@ function expandLeetspeak(text : string) : string[] {
 function cartesianJoin(arrays: string[][]) {
     return arrays.reduce((acc, curr) => acc.flatMap(a => curr.map(b => a + b)), ['']);
 }
+
 function containsAbuseFlexible(input: string) {
     const words = input.split(/\b/); // split by word boundaries
     const candidates = words.flatMap(word => (/\w+/.test(word)) ? expandLeetspeak(word) : [word]);
     const normalized = candidates.join('').toLowerCase();
     return keywords.some(word => normalized.includes(word));
 }
+
+
 export { expandLeetspeak, containsAbuseFlexible };
