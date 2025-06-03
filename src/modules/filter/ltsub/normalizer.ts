@@ -1,4 +1,4 @@
-import { keywords } from "./impexp.ts";
+import { keywords } from "../impexp.ts";
 
 const leetMap: { [key: string]: string[] } = {
     '@': ['a', 'u'],

@@ -1,5 +1,5 @@
 // Function to check if a string contains any of the keywords
-import { keywords, usernames } from './impexp.js';
+import { keywords, usernames } from '../impexp.js';
 
 const containsKeyword = (str:string) => {
     if (keywords.length === 0) {

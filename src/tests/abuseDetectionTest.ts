@@ -1,4 +1,4 @@
-import { containsAbuseFlexible } from '../filter/normalizer.ts';
+import { containsAbuseFlexible } from '../modules/filter/ltsub/normalizer.ts';
 const tests = [
     { input: "H@te", expected: false },
     { input: "N1gg3r", expected: true },

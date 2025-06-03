@@ -1,4 +1,4 @@
-import { expandLeetspeak } from '../filter/normalizer.js';
+import { expandLeetspeak } from '../modules/filter/ltsub/normalizer.js';
 const tests = [
     { input: "H@te", expected: "hate" },
     { input: "N1gg3r", expected: "nigger" },

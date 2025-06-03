@@ -27,7 +27,7 @@ function grabYTCommentText(comment: HTMLElement): string | null {
 
 
 
-function YTreportHateSpeech2(report: YTReportData) {
+async function YTreportHateSpeech2(report: YTReportData) {
     // Log the report locally oron your backend
     console.log("Reporting hate speech:", report);
 
@@ -49,7 +49,7 @@ function YTreportHateSpeech2(report: YTReportData) {
         // Isolate the text of the comment
         if (commentRenderer !== null && commentRenderer !== undefined) {
             let commentText: string = commentRenderer.querySelector("#content")?.innerHTML ?? "";
-            let toxicityScore: number = evaluateToxicity(commentText); // Placeholder for toxicity 
+            let toxicityScore: number = await evaluateToxicity(commentText); // returns a score w/ 5+ being verified as hate speech 
             return toxicityScore;
         }
         else{

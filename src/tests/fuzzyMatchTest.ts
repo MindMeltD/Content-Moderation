@@ -1,5 +1,5 @@
-import '../filter/fuzzy/fuzzymatch.ts'; // Adjust path as needed
-import { fuzzyMatch } from '../filter/fuzzy/fuzzymatch.ts';
+import '../modules/filter/fuzzy/fuzzymatch.ts'; // Adjust path as needed
+import { fuzzyMatch } from '../modules/filter/fuzzy/fuzzymatch.ts';
 
 const testCases = [
   {

@@ -2,13 +2,13 @@ import {popupHTML} from './UI/basicPopup';
 import ReactDOM from 'react-dom/client';
 import './tests/fuzzyMatchTest';
 import './UI/style.css';
-import { runTests } from './tests/fuzzyMatchTest';
+// import { runTests } from './tests/AiMatchTest';
 
 const App = () => {
     return (
         <div>
             {popupHTML({ blocked: 28, onClick: () => console.log("Popup clicked") })}
-            {/* <h4>Filter Test</h4>
+            {/* <h4>AI Filter Test</h4>
             <button id="testButton" onClick={() => runTests()}>Test Button</button> */}
         </div>
     );

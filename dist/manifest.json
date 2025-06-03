@@ -3,7 +3,12 @@
   "name": "Hate Speech Reporter",
   "version": "0.1",
   "description": "Right-click to report hateful content to moderators.",
-  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "permissions": ["contextMenus", "activeTab", "scripting","webRequest",
+    "webRequestBlocking",
+    "https://tfhub.dev/*",
+    "https://www.kaggleusercontent.com/*"
+  ],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
