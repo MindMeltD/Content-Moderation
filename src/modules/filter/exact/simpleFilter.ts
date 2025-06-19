@@ -1,25 +1,43 @@
 // Function to check if a string contains any of the keywords
 import { keywords, usernames } from '../impexp.js';
+import { extractInnerText, extractUsername } from '../../DOMInteraction/DOMSelector.ts';
 
-const containsKeyword = (str:string) => {
+function containsKeyword(node : HTMLElement): number {
+    const innerText = extractInnerText(node);
+
     if (keywords.length === 0) {
-        console.warn("Keywords list is empty. Please fetch the filter data first.");
-        return false;
+        console.warn("Keyword list is empty. Please fetch the filter data first.");
+        return -1;
     }
-    return keywords.some(keyword => str.toLowerCase().includes(keyword.toLowerCase()));
-};
 
+    // If the innerText contains any of the keywords then return 5
+    if (keywords.some(keyword => innerText.includes(keyword))) {
+        return 5;
+    }
 
-// Function to check if a string contains any of the usernames
-const containsUsername = (str:string) => {
+    // If the innerText does not contain any of the keywords then return 0
+    return 0;
+}
+
+// Takes node, and the type of selector query to find it within the given node
+// Returns an array of usernames found in the nodes
+function containsUsername(node : HTMLElement, selector: string): number {
+    const usernameElement = extractUsername(node, selector);
+
     if (usernames.length === 0) {
         console.warn("Usernames list is empty. Please fetch the filter data first.");
-        return false;
+        return -1;
     }
-    // For each username, check if the lower case version of the username is included in the lower case version of the string
-    // This is case insensitive
-    // This is useful for checking if a username is mentioned in a comment or post
-    return usernames.some(username => str.toLowerCase().includes(username.toLowerCase()));
-};
+
+    // If the username is in usernames then return 5
+    if (usernames.includes(usernameElement)) {
+        return 5;
+    }
+
+    // If the username is not in usernames then return 0
+    return 0;
+}
+
+
 
 export { containsKeyword, containsUsername };

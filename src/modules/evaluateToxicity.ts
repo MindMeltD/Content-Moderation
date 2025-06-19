@@ -34,22 +34,6 @@ async function evaluateToxicity(text: string): Promise<number> {
         return score;
     }
 
-    // if (score === 0 && text.length > 0) {
-    //     const predictions = await AiFilter.classifyText([text]);
-    //     // predictions is expected to be an array of objects with a 'results' property
-    //     if (Array.isArray(predictions)) {
-    //         predictions.forEach(prediction => {
-    //             if (prediction.results && Array.isArray(prediction.results)) {
-    //                 prediction.results.forEach((result: any) => {
-    //                     if (result.match) {
-    //                         score += 2;
-    //                     }
-    //                 });
-    //             }
-    //         });
-    //     }
-    // }
-
     return score;
 
 }
