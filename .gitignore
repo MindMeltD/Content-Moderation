@@ -2,7 +2,7 @@
 node_modules/
 
 #tests
-tests/
+src/tests/
 
 # Logs
 logs
