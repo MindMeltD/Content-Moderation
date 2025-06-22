@@ -6,6 +6,7 @@
 const externalFileURL = "https://cdn.jsdelivr.net/gh/Eonarchy/p2025/filter.json";
 let keywords: string[] = [];
 let usernames: string[] = [];
+let sites: string[] = [];
 
 // Fetches external filter data from a JSON file
 // and stores it in the keywords and usernames arrays.
@@ -19,6 +20,7 @@ const fetchFilters = async () => {
         const data = await response.json();
         keywords = data.keywords || [];
         usernames = data.usernames || [];
+        sites = data.sites || [];
     }
     catch (error) {
         console.error("Error fetching filter data:", error);
@@ -30,19 +32,19 @@ const fetchFilters = async () => {
 // and is used to persist the data across sessions.
 
 const storeFilters = () => {
-    if (keywords.length === 0 && usernames.length === 0) {
+    if (keywords.length === 0 && usernames.length === 0  && sites.length === 0) {
         console.warn("No data to store in local storage.");
         return;
     }
 
     const filterData = {
         keywords: keywords,
-        usernames: usernames
+        usernames: usernames,
+        sites: sites
     };
 
     localStorage.setItem("filterData", JSON.stringify(filterData));
-};
-
+}
 
 // Function to load data from local storage
 
@@ -65,6 +67,7 @@ const loadFilters = () => {
         }
         keywords = data.keywords || [];
         usernames = data.usernames || [];
+        sites = data.sites || [];
     }
     else {
         // If there is no local storage, fetch them from the external file
@@ -77,7 +80,8 @@ const loadFilters = () => {
 };
 
 // Immediately fetch, store, and load filters on module import
-fetchFilters();
-storeFilters();
-loadFilters();
-export { fetchFilters, storeFilters, loadFilters, keywords, usernames };
+// fetchFilters();
+// storeFilters();
+// loadFilters();
+
+export { fetchFilters, storeFilters, loadFilters, keywords, usernames, sites };
