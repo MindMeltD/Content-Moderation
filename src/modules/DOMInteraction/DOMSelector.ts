@@ -12,18 +12,18 @@ function findAllNodeTypes(applicableTags : string[]): HTMLElement[] {
     return nodes;
 }
 
+function extractSanitizedText(node: HTMLElement, method : keyof HTMLElement): string {
+    
+    if (!node) return "";
+
+    const value = typeof node[method] === 'function' ? (node[method] as Function).call(node) : node[method];
+    
+    return value.toString().trim();
+}
 
 function extractUsername(node: HTMLElement, selector: string): string {
     const usernameElement = node.querySelector(selector);
     return usernameElement ? usernameElement.textContent?.trim() || '' : '';
 }
 
-
-function extractInnerText(node: HTMLElement): string {
-    return node.textContent?.trim() || '';
-}
-
-
-
-
-export { findAllNodeTypes, extractUsername, extractInnerText };
+export { findAllNodeTypes, extractUsername, extractSanitizedText };
